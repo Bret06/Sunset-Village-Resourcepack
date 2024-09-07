@@ -1,0 +1,60 @@
+name: Create Resource Pack Zip
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Prepare merged pack directory
+      run: mkdir -p merged_pack/assets
+
+    - name: Copy main pack files
+      run: |
+        cp pack.png merged_pack/
+        cp pack.mcmeta merged_pack/
+
+    - name: Merge assets folders
+      run: |
+        cp -r assets/* merged_pack/assets/
+        for d in .mergeable_packs/*/assets/*; do
+          cp -r "$d" merged_pack/assets/
+        done
+
+    - name: Create zip file
+      run: |
+        cd merged_pack
+        zip -r ../merged-pack.zip ./*
+        cd ..
+
+    - name: Verify zip file creation
+      run: ls -alh
+
+    - name: Configure git
+      run: |
+        git config --global user.name 'github-actions[bot]'
+        git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+    - name: Commit and push zip file to root
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git add merged-pack.zip
+        git commit -m 'Add merged resource pack'
+        git push origin main

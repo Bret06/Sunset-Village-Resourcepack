@@ -1,0 +1,62 @@
+{
+	"music_disc.herobrine_lullaby": {
+		"sounds": [
+			{
+				"name": "lunareclipse.ftfsmp:music_disc/herobrine_lullaby",
+				"volume": 1,
+				"pitch": 1,
+				"weight": 1
+			}
+		]
+	},
+	"music_disc.trick_or_treat": {
+		"sounds": [
+			{
+				"name": "lunareclipse.ftfsmp:music_disc/trick_or_treat",
+				"volume": 1,
+				"pitch": 1,
+				"weight": 1
+			}
+		]
+	},
+	"music_disc.the_legend_of_herobrine": {
+		"sounds": [
+			{
+				"name": "lunareclipse.ftfsmp:music_disc/the_legend_of_herobrine",
+				"volume": 1,
+				"pitch": 1,
+				"weight": 1
+			}
+		]
+	},
+	"music_disc.nowhere": {
+		"sounds": [
+			{
+				"name": "lunareclipse.ftfsmp:music_disc/nowhere",
+				"volume": 1,
+				"pitch": 1,
+				"weight": 1
+			}
+		]
+	},
+	"music.bret_boss": {
+		"sounds": [
+			{
+				"name": "lunareclipse.ftfsmp:music/bret_boss",
+				"volume": 1,
+				"pitch": 1,
+				"weight": 1
+			}
+		]
+	},
+	"misc.lalala": {
+		"sounds": [
+			{
+				"name": "lunareclipse.ftfsmp:misc/lalala",
+				"volume": 1,
+				"pitch": 1,
+				"weight": 1
+			}
+		]
+	}
+}
