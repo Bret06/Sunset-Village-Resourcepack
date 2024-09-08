@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/handheld",
-  "textures": {
-    "layer0": "lunareclipse.cosmetics:item/tools/aetherite/hoe"
-  }
-}

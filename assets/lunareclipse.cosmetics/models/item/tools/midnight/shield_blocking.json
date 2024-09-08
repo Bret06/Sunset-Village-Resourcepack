@@ -1,6 +1,0 @@
-{
-    "parent": "lunareclipse.cosmetics:item/tools/shield_blocking",
-    "textures": {
-      "layer0": "lunareclipse.cosmetics:item/tools/midnight/shield"
-    }
-  }
