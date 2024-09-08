@@ -53,10 +53,8 @@ jobs:
 
     - name: Commit and push zip file to root
       env:
-        PAT_TOKEN: ${{ secrets.PAT_TOKEN }}  # Use PAT instead of GITHUB_TOKEN
+        PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
       run: |
-        git remote set-url origin https://Bret06:${{ secrets.PAT_TOKEN }}@github.com/Bret06/Sunset-Village-Resourcepack.git
         git add merged-pack.zip
         git commit -m 'Add merged resource pack'
         git push origin main
-
