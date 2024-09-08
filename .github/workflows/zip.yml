@@ -53,7 +53,7 @@ jobs:
 
     - name: Commit and push zip file to root
       env:
-        PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: |
         git add merged-pack.zip
         git commit -m 'Add merged resource pack'
